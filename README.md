@@ -1,5 +1,5 @@
 <div align="center">
-  <img width="1200" height="350" style="object-fit: cover;" alt="Tallyfy POS Banner" src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=1200" />
+  <img width="1200" height="350" style="object-fit: cover;" alt="Tallyfy POS Banner" src="src/tallyfy/Tallyfy POS - Google Chrome 30_05_2026 23_18_25.png" />
 </div>
 
 <h1 align="center">Tallyfy POS</h1>
