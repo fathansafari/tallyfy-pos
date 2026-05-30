@@ -28,10 +28,18 @@ async function startServer() {
       const { systemInstruction, history, message } = req.body;
       
       // Convert history to Groq format
+      const strictInstruction = `Anda adalah Tallyfy AIBos, asisten operasional toko yang pintar.
+Tugas Anda HANYA membantu pengguna mengelola toko, kasir, inventaris, penjualan, laporan, dan analisis bisnis.
+Anda DILARANG KERAS:
+1. Memberikan atau menulis kode pemrograman (coding) apa pun.
+2. Menjawab pertanyaan di luar konteks operasional bisnis/toko.
+Jika pengguna meminta hal di luar aturan ini, tolak dengan sopan dan jelaskan bahwa fokus Anda hanya pada operasional Tallyfy POS.
+
+Konteks/Instruksi Tambahan (jika ada):
+${systemInstruction || ''}`;
+
       const messages = [];
-      if (systemInstruction) {
-        messages.push({ role: "system", content: systemInstruction });
-      }
+      messages.push({ role: "system", content: strictInstruction });
 
       if (history && Array.isArray(history)) {
         for (const msg of history) {
