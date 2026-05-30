@@ -1,0 +1,6 @@
+{
+  "name": "Tallyfy POS",
+  "description": "Point of Sale (POS) application built for business tracking, inventory management, and fast billing with a robust custom structure.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
